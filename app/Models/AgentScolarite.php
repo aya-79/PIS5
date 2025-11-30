@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class AgentScolarite extends Model
 {
     //
-    protected $table = 'agent-scolarites';
+    protected $table = 'agent_scolarites';
 
     protected $fillable = [
         'user_id',
