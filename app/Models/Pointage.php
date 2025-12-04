@@ -12,6 +12,7 @@ class Pointage extends Model
         'date',
         'heure_debut',
         'heure_fin',
+        'duree',
         'type_seance',
         'statut_pointage',
         'motif_rejet',
@@ -27,19 +28,11 @@ class Pointage extends Model
         'date' => 'date',
         'heure_debut' => 'datetime:H:i',
         'heure_fin' => 'datetime:H:i',
-        'duree' => 'float',
         'date_creation' => 'datetime',
         'date_validation' => 'datetime',
     ];
 
 
-    public function getDureeAttribute()
-    {
-        if ($this->heure_debut && $this->heure_fin) {
-            return round(($this->heure_fin->diffInMinutes($this->heure_debut)) / 60, 2);
-        }
-        return null;
-    }
 
     // Relation avec Enseignant
     public function enseignant()
