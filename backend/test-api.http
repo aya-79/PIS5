@@ -1,0 +1,11 @@
+### Test API Status
+GET http://127.0.0.1:8000/api/test
+
+### Test Login
+POST http://127.0.0.1:8000/api/login
+Content-Type: application/json
+
+{
+  "email": "your_email@example.com",
+  "password": "your_password"
+}
